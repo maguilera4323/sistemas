@@ -10,10 +10,11 @@ include("./modelos/DatosTablas/obtenerDatosPerfil.php");
 
 <h3 style="padding:3rem;"><i class="fas fa-user-edit"></i> &nbsp; PERFIL </h3>
 
+
+<div class="perfil-container">
+<h5 style="padding:1rem;">Datos del usuario</h5>
 <img src="<?php echo $_SESSION['foto_login']; ?>" width="150" height="150" alt="" alt="">
 <br>
-<h5>Datos del usuario</h5>
-
 <?php
     //variables para generar la url completa del sitio y obtener el id del registro
       $host= $_SERVER["HTTP_HOST"];
@@ -28,6 +29,7 @@ include("./modelos/DatosTablas/obtenerDatosPerfil.php");
         foreach ($resultado as $fila){
     ?>
 
+    <br>
     <div class="form-group perfil">
 		<label class="perfil">Usuario</label>
 		<input type="text" class="form-group" name="parametro_nuevo" id="input perfil" maxlength="27" 
@@ -57,6 +59,7 @@ include("./modelos/DatosTablas/obtenerDatosPerfil.php");
       <input type="text" class="" name="parametro_nuevo" id="input perfil" maxlength="27" 
         value="<?php echo $fila['correo_electronico'] ?>" readonly>
     </div>
+    <br>
     <?php
             }
     ?>
@@ -109,7 +112,7 @@ include("./modelos/DatosTablas/obtenerDatosPerfil.php");
                                     <br>
                                     <div class="form-group">
                                         <label class="label-actualizar">Fotografía</label>
-                                        <input type="file" class="form-control" name="imagen_act" id="imagen" maxlength="256" placeholder="Imagen">
+                                        <input type="file" class="form-control" name="imagen_act" id="imagen" maxlength="256" placeholder="Imagen" value="<?php echo $fila['foto_usuario']?>">
                                         <img src="<?php echo $_SESSION['foto_login']; ?>" width="100" height="100" alt="">
                                     </div>
                                     <br>
@@ -123,3 +126,4 @@ include("./modelos/DatosTablas/obtenerDatosPerfil.php");
 
    
 <br>
+</div>

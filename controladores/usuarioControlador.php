@@ -2,10 +2,8 @@
 
 if($peticionAjax){
 	require_once "../modelos/usuarioModelo.php";
-	require_once "../modelos/DatosTablas/obtenerDatosConCondicion.php";
 }else{
 	require_once "./modelos/usuarioModelo.php";
-	require_once "./modelos/DatosTablas/obtenerDatosConCondicion.php";
 }
 
 

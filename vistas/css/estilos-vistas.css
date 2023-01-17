@@ -130,5 +130,10 @@ div .label-actualizar{
 }
 
 .perfil #input-pefil{
-  width: 25px;
+  width: 30px;
+}
+
+.perfil-container{
+  width: 12rem;
+  margin:0 auto;
 }
